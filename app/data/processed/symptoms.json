@@ -1,0 +1,1267 @@
+{
+  "Back of Head Pain": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Trapezius",
+      "Sternocleidomastoid"
+    ],
+    "secondary_muscles": [
+      "Splenius Capitis",
+      "Splenius Cervicis",
+      "Occipitalis",
+      "Digastric",
+      "Temporalis"
+    ]
+  },
+  "Back of Neck Pain": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Trapezius",
+      "Multifidi"
+    ],
+    "secondary_muscles": [
+      "Levator Scapulae",
+      "Splenius Cervicis"
+    ]
+  },
+  "Cheek Pain (like Sinusitis)": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Sternocleidomastoid",
+      "Masseter",
+      "Lateral Pterygoid",
+      "Trapezius"
+    ],
+    "secondary_muscles": [
+      "Medial Pterygoid"
+    ]
+  },
+  "Difficulty Swallowing": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Digastric",
+      "Lateral Pterygoid",
+      "Medial Pterygoid"
+    ],
+    "secondary_muscles": [
+      "Longus Colli"
+    ]
+  },
+  "Dizziness & Vertigo": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Sternocleidomastoid"
+    ],
+    "secondary_muscles": []
+  },
+  "Drooling in Sleep": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Medial Pterygoid"
+    ],
+    "secondary_muscles": []
+  },
+  "Ear Pain": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Sternocleidomastoid",
+      "Masseter"
+    ],
+    "secondary_muscles": []
+  },
+  "Earaches/Tinnitus (Ringing)/Itch": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Sternocleidomastoid",
+      "Masseter",
+      "Lateral Pterygoid",
+      "Medial Pterygoid"
+    ],
+    "secondary_muscles": []
+  },
+  "Feeling Continued Movement": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Sternocleidomastoid"
+    ],
+    "secondary_muscles": []
+  },
+  "Imbalance when Driving": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Sternocleidomastoid"
+    ],
+    "secondary_muscles": []
+  },
+  "Frontal Headache": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Sternocleidomastoid"
+    ],
+    "secondary_muscles": [
+      "Semispinalis Capitis",
+      "Frontalis"
+    ]
+  },
+  "Headaches or Migraines": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Trapezius",
+      "Sternocleidomastoid",
+      "Temporalis",
+      "Splenius Capitis"
+    ],
+    "secondary_muscles": [
+      "Splenius Cervicis",
+      "Frontalis"
+    ]
+  },
+  "Post Nasal Drip": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Lateral Pterygoid",
+      "Medial Pterygoid",
+      "Sternocleidomastoid"
+    ],
+    "secondary_muscles": []
+  },
+  "Runny Nose": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Lateral Pterygoid",
+      "Medial Pterygoid",
+      "Sternocleidomastoid"
+    ],
+    "secondary_muscles": []
+  },
+  "Sore Throat": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Lateral Pterygoid",
+      "Medial Pterygoid",
+      "Sternocleidomastoid",
+      "Digastric"
+    ],
+    "secondary_muscles": []
+  },
+  "Stiff Neck": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Levator Scapulae"
+    ],
+    "secondary_muscles": []
+  },
+  "Swollen Glands": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Digastric"
+    ],
+    "secondary_muscles": []
+  },
+  "Tearing/Reddening of Eye, Drooping of Eyelid": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Sternocleidomastoid"
+    ],
+    "secondary_muscles": []
+  },
+  "Teeth Grinding (Bruxism)": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Digastric",
+      "Masseter",
+      "Soleus"
+    ],
+    "secondary_muscles": []
+  },
+  "Temple and Eyebrow Pain": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Trapezius",
+      "Temporalis",
+      "Sternocleidomastoid"
+    ],
+    "secondary_muscles": [
+      "Masseter",
+      "Splenius Cervicis"
+    ]
+  },
+  "Temporal Headache (Temples)": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Trapezius",
+      "Sternocleidomastoid"
+    ],
+    "secondary_muscles": [
+      "Semispinalis Capitis",
+      "Splenius Cervicis",
+      "Temporalis"
+    ]
+  },
+  "Temporomandibular Joint (TMJ) Pain": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Sternocleidomastoid",
+      "Masseter",
+      "Lateral Pterygoid",
+      "Medial Pterygoid"
+    ],
+    "secondary_muscles": []
+  },
+  "TMJ Disorder": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Trapezius",
+      "Masseter",
+      "Lateral Pterygoid",
+      "Medial Pterygoid"
+    ],
+    "secondary_muscles": []
+  },
+  "Throat & Front of Neck Pain": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Digastric",
+      "Sternocleidomastoid"
+    ],
+    "secondary_muscles": [
+      "Medial Pterygoid"
+    ]
+  },
+  "Blocked Sinus": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Sternocleidomastoid",
+      "Digastric",
+      "Lateral Pterygoid",
+      "Medial Pterygoid"
+    ],
+    "secondary_muscles": []
+  },
+  "Rear Tooth Pain": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Temporalis",
+      "Digastric",
+      "Masseter"
+    ],
+    "secondary_muscles": []
+  },
+  "Vertex Pain": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Sternocleidomastoid"
+    ],
+    "secondary_muscles": [
+      "Splenius Capitis"
+    ]
+  },
+  "Visual Perception Problems": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Sternocleidomastoid"
+    ],
+    "secondary_muscles": []
+  },
+  "Eye Pain": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Occipitalis",
+      "Trapezius"
+    ],
+    "secondary_muscles": [
+      "Temporalis"
+    ]
+  },
+  "Bruxism/Grinding": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Temporalis"
+    ],
+    "secondary_muscles": [
+      "Masseter"
+    ]
+  },
+  "Blocked Ear": {
+    "region": "Face, Head and Neck",
+    "primary_muscles": [
+      "Medial Pterygoid",
+      "Lateral Pterygoid",
+      "Masseter"
+    ],
+    "secondary_muscles": []
+  },
+  "Back of Arm Pain": {
+    "region": "Shoulder & Upper Arm",
+    "primary_muscles": [
+      "Scalenes",
+      "Teres Major"
+    ],
+    "secondary_muscles": [
+      "Triceps Brachii",
+      "Deltoid",
+      "Subscapularis",
+      "Supraspinatus",
+      "Teres Minor",
+      "Latissimus Dorsi",
+      "Serratus anterior",
+      "Coracobrachialis"
+    ]
+  },
+  "Back of Shoulder Pain": {
+    "region": "Shoulder & Upper Arm",
+    "primary_muscles": [
+      "Deltoid",
+      "Levator Scapulae"
+    ],
+    "secondary_muscles": [
+      "Supraspinatus",
+      "Teres Major",
+      "Teres Minor",
+      "Subscapularis",
+      "Serratus Anterior",
+      "Latissimus Dorsi",
+      "Triceps Brachii",
+      "Trapezius"
+    ]
+  },
+  "Front of Arm Pain": {
+    "region": "Shoulder & Upper Arm",
+    "primary_muscles": [
+      "Scalenes",
+      "Biceps Brachii",
+      "Triceps Brachii",
+      "Subclavius"
+    ],
+    "secondary_muscles": [
+      "Infraspinatus",
+      "Brachialis",
+      "Supraspinatus",
+      "Deltoid"
+    ]
+  },
+  "Front of Shoulder Pain": {
+    "region": "Shoulder & Upper Arm",
+    "primary_muscles": [
+      "Infraspinatus",
+      "Deltoid",
+      "Scalenes",
+      "Supraspinatus",
+      "Pectoralis Major",
+      "Pectoralis Minimus",
+      "Biceps Brachii",
+      "Coracobrachialis"
+    ],
+    "secondary_muscles": [
+      "Subclavius",
+      "Latissimus Dorsi"
+    ]
+  },
+  "Mid-Thoracic Back Pain": {
+    "region": "Shoulder & Upper Arm",
+    "primary_muscles": [
+      "Rectus Abdominis",
+      "Scalenes",
+      "Latissimus Dorsi",
+      "Multifidi",
+      "Rhomboid",
+      "Serratus Posterior Superior",
+      "Infraspinatus",
+      "Trapezius",
+      "Serratus Anterior"
+    ],
+    "secondary_muscles": [
+      "Levator Scapulae"
+    ]
+  },
+  "Upper Thoracic Back Pain": {
+    "region": "Shoulder & Upper Arm",
+    "primary_muscles": [
+      "Scalenes",
+      "Levator Scapulae",
+      "Trapezius",
+      "Multifidi"
+    ],
+    "secondary_muscles": [
+      "Supraspinatus",
+      "Rhomboid",
+      "Splenius Cervicis",
+      "Triceps Brachii",
+      "Biceps Brachii"
+    ]
+  },
+  "Thoracic Outlet Syndrome": {
+    "region": "Shoulder & Upper Arm",
+    "primary_muscles": [
+      "Scalenes",
+      "Pectoralis Major"
+    ],
+    "secondary_muscles": [
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Subscapularis",
+      "Pectoralis Minimus",
+      "Trapezius",
+      "Levator Scapulae",
+      "Triceps Brachii"
+    ]
+  },
+  "Antecubital Pain": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [],
+    "secondary_muscles": []
+  },
+  "Carpal Tunnel-like Pain in Wrist (watchband area)": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [],
+    "secondary_muscles": []
+  },
+  "Dorsal Finger Pain": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [],
+    "secondary_muscles": []
+  },
+  "Dorsal Forearm Pain": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [],
+    "secondary_muscles": []
+  },
+  "Dorsal Wrist & Hand Pain": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [],
+    "secondary_muscles": []
+  },
+  "Elbow Pain": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [],
+    "secondary_muscles": []
+  },
+  "Handwriting Difficulties": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [
+      "Adductor Pollicis",
+      "Opponens Pollicis"
+    ],
+    "secondary_muscles": []
+  },
+  "Lateral Epicondylar Pain": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [
+      "Supinator",
+      "Brachioradialis",
+      "Extensor Carpi Radialis Longus",
+      "Triceps Brachii",
+      "Supraspinatus",
+      "Extensor Digitorum",
+      "Anconeus"
+    ],
+    "secondary_muscles": []
+  },
+  "Medial Epicondylar Pain": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [
+      "Triceps Brachii",
+      "Pectoralis Major",
+      "Pectoralis Minor",
+      "Serratus Anterior"
+    ],
+    "secondary_muscles": []
+  },
+  "Olecranon Pain": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [
+      "Triceps Brachii"
+    ],
+    "secondary_muscles": []
+  },
+  "Painful Weak Grip": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [
+      "Infraspinatus",
+      "Scalenes",
+      "Extensor Digitorum",
+      "Brachioradialis"
+    ],
+    "secondary_muscles": []
+  },
+  "Problems Holding Arms Up (as when folding sheets)": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [
+      "Subscapularis",
+      "Infraspinatus",
+      "Supraspinatus",
+      "Levator Scapulae"
+    ],
+    "secondary_muscles": []
+  },
+  "Radial Forearm Pain": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [],
+    "secondary_muscles": [
+      "Scalenes",
+      "Infraspinatus",
+      "Brachioradialis",
+      "Supraspinatus",
+      "Subclavius"
+    ]
+  },
+  "Thumb & Radial Hand Pain": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [
+      "Supinator",
+      "Scalenes",
+      "Brachialis",
+      "Brachioradialis",
+      "Opponens Pollicis",
+      "Adductor Pollicis"
+    ],
+    "secondary_muscles": [
+      "Infraspinatus",
+      "Extensor Carpi Radialis Longus",
+      "Subclavius",
+      "Flexor Pollicis Longus"
+    ]
+  },
+  "Thumb Pain and Tingling Numbness (Dysesthesia)": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [
+      "Adductor Pollicis",
+      "Brachialis",
+      "Opponens Pollicis"
+    ],
+    "secondary_muscles": []
+  },
+  "Ulnar Forearm Pain": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [],
+    "secondary_muscles": [
+      "Latissimus Dorsi",
+      "Pectoralis Major",
+      "Pectoralis Minor"
+    ]
+  },
+  "Volar Finger Pain": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [
+      "Flexor Digitorum Superficialis",
+      "Abductor Digiti Minimi"
+    ],
+    "secondary_muscles": [
+      "Latissimus Dorsi",
+      "Palmaris Longus",
+      "Pronator Teres",
+      "Triceps Brachii"
+    ]
+  },
+  "Volar Wrist & Palmar Pain": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [
+      "Pectoralis Major"
+    ],
+    "secondary_muscles": [
+      "Extensor Carpi Radialis Brevis",
+      "Extensor Carpi Ulnaris",
+      "Opponens Pollicis",
+      "Pectoralis Minor",
+      "Latissimus Dorsi",
+      "Palmaris Longus",
+      "Pronator Teres"
+    ]
+  },
+  "Writer's Cramp": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [
+      "Brachioradialis"
+    ],
+    "secondary_muscles": [
+      "Extensor Carpi Radialis Brevis",
+      "Extensor Carpi Radialis Longus",
+      "Extensor Digitorum"
+    ]
+  },
+  "Texters Thumb": {
+    "region": "Forearm & Hand",
+    "primary_muscles": [
+      "Brachioradialis"
+    ],
+    "secondary_muscles": [
+      "Extensor Carpi Radialis Brevis",
+      "Extensor Carpi Radialis Longus",
+      "Extensor Digitorum",
+      "Adductor Pollicis",
+      "Opponens Pollicis"
+    ]
+  },
+  "Abdominal Pain/Cramps": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Iliocostalis Thoracis",
+      "Multifidi"
+    ],
+    "secondary_muscles": [
+      "Rectus Abdominis",
+      "Obliquus Internus Abdominis",
+      "Quadratus Lumborum"
+    ]
+  },
+  "Appendicitis-like Pains": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Rectus Abdominis",
+      "Piriformis",
+      "Iliocostalis Lumborum",
+      "Iliocostalis Thoracis"
+    ],
+    "secondary_muscles": []
+  },
+  "Bloating/Nausea/Abdominal Cramps": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Rectus Abdominis",
+      "Multifidi",
+      "Quadratus Lumborum",
+      "Iliocostalis Lumborum",
+      "Iliocostalis Thoracis",
+      "Longissimus Thoracis"
+    ],
+    "secondary_muscles": []
+  },
+  "Diarrhea": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Obliquus Internus Abdominis"
+    ],
+    "secondary_muscles": []
+  },
+  "Dry Cough": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Sternocleidomastoid"
+    ],
+    "secondary_muscles": []
+  },
+  "Front of Chest Pain": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Pectoralis Major",
+      "Pectoralis Minor",
+      "Scalenes",
+      "Sternocleidomastoid",
+      "Subclavius"
+    ],
+    "secondary_muscles": [
+      "Obliquus Internus Abdominis"
+    ]
+  },
+  "Hypersensitive Nipples/Breast Pain": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Pectoralis Minor",
+      "Pectoralis Major"
+    ],
+    "secondary_muscles": []
+  },
+  "Irritable Bowel": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Multifidi",
+      "Obliquus Internus Abdominis"
+    ],
+    "secondary_muscles": []
+  },
+  "Lax, Pendulus Abdomen": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Rectus Abdominis",
+      "Obliquus Internus Abdominis"
+    ],
+    "secondary_muscles": []
+  },
+  "Low Back Pain": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Quadratus Lumborum",
+      "Longissimus Thoracis",
+      "Iliocostalis Lumborum",
+      "Iliocostalis Thoracis",
+      "Multifidi",
+      "Rectus Abdominis"
+    ],
+    "secondary_muscles": []
+  },
+  "Menstrual Problems, Pelvic Pain": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Levator Ani",
+      "Adductor Magnus",
+      "Obliquus Internus Abdominis",
+      "Obturator Internus"
+    ],
+    "secondary_muscles": [
+      "Serratus Posterior Inferior"
+    ]
+  },
+  "Nausea & Vomiting": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Rectus Abdominis"
+    ],
+    "secondary_muscles": []
+  },
+  "Rapid/Fluttery/Irregular Heartbeat/Heart Attack-like Pain": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Pectoralis Major"
+    ],
+    "secondary_muscles": []
+  },
+  "Reflux Esophagitis": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Obliquus Internus Abdominis"
+    ],
+    "secondary_muscles": []
+  },
+  "Sacral & Gluteal Pain": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Longissimus Thoracis",
+      "Iliocostalis Lumborum",
+      "Multifidi"
+    ],
+    "secondary_muscles": []
+  },
+  "Shortness of Breath/Stitch-in-the-side": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Serratus Anterior"
+    ],
+    "secondary_muscles": []
+  },
+  "Side of Chest Pain": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Serratus Anterior",
+      "Intercostals"
+    ],
+    "secondary_muscles": [
+      "Latissimus Dorsi"
+    ]
+  },
+  "Thoracic Back Pain": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Iliocostalis Thoracis",
+      "Multifidi",
+      "Serratus Posterior Inferior",
+      "Rectus Abdominis",
+      "Intercostals"
+    ],
+    "secondary_muscles": [
+      "Latissimus Dorsi"
+    ]
+  },
+  "Urinary Frequency, Urine Retention, \"Kidney\" Pain": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Rectus Abdominis",
+      "Obliquus Internus Abdominis"
+    ],
+    "secondary_muscles": []
+  },
+  "Lumbar Pain": {
+    "region": "Lumbo-Pelvic",
+    "primary_muscles": [
+      "Multifidi",
+      "Rectus Abdominis"
+    ],
+    "secondary_muscles": [
+      "Gluteus Medius"
+    ]
+  },
+  "Reflux": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Obliquus Internus Abdominis"
+    ],
+    "secondary_muscles": []
+  },
+  "Lower Pain": {
+    "region": "Spine & Torso",
+    "primary_muscles": [
+      "Piriformis",
+      "Erector Spinae"
+    ],
+    "secondary_muscles": [
+      "Gluteus Medius",
+      "Psoas Major"
+    ]
+  },
+  "Anal Pain and Painful Bowel Movements": {
+    "region": "Lumbo-Pelvic",
+    "primary_muscles": [
+      "Levator Ani"
+    ],
+    "secondary_muscles": []
+  },
+  "Buttock Pain": {
+    "region": "Lumbo-Pelvic",
+    "primary_muscles": [
+      "Gluteus Medius",
+      "Quadratus Lumborum",
+      "Gluteus Maximus",
+      "Piriformis",
+      "Gluteus Minimus",
+      "Rectus Abdominis"
+    ],
+    "secondary_muscles": []
+  },
+  "Colic": {
+    "region": "Lumbo-Pelvic",
+    "primary_muscles": [
+      "Rectus Abdominis"
+    ],
+    "secondary_muscles": []
+  },
+  "Dysmenorrhea": {
+    "region": "Lumbo-Pelvic",
+    "primary_muscles": [
+      "Rectus Abdominis"
+    ],
+    "secondary_muscles": []
+  },
+  "Groin Pain": {
+    "region": "Lumbo-Pelvic",
+    "primary_muscles": [
+      "Adductor Magnus",
+      "Obliquus Externus Abdominis"
+    ],
+    "secondary_muscles": []
+  },
+  "Iliosacral Pain": {
+    "region": "Lumbo-Pelvic",
+    "primary_muscles": [
+      "Levator Ani",
+      "Gluteus Medius",
+      "Quadratus Lumborum",
+      "Gluteus Maximus",
+      "Multifidi"
+    ],
+    "secondary_muscles": [
+      "Rectus Abdominis"
+    ]
+  },
+  "Impotence due to Nerve Entrapments": {
+    "region": "Lumbo-Pelvic",
+    "primary_muscles": [
+      "Piriformis",
+      "Gluteus Maximus"
+    ],
+    "secondary_muscles": []
+  },
+  "Lower Abdominal Pain": {
+    "region": "Lumbo-Pelvic",
+    "primary_muscles": [
+      "Rectus Abdominis",
+      "Obliquus Externus Abdominis"
+    ],
+    "secondary_muscles": [
+      "Multifidi",
+      "Quadratus Lumborum"
+    ]
+  },
+  "Painful Intercourse": {
+    "region": "Lumbo-Pelvic",
+    "primary_muscles": [],
+    "secondary_muscles": []
+  },
+  "Pelvic Pain": {
+    "region": "Lumbo-Pelvic",
+    "primary_muscles": [
+      "Levator Ani",
+      "Obturator Internus",
+      "Adductor Magnus"
+    ],
+    "secondary_muscles": [
+      "Piriformis"
+    ]
+  },
+  "Sciatica": {
+    "region": "Lumbo-Pelvic",
+    "primary_muscles": [
+      "Gluteus Minimus",
+      "Piriformis",
+      "Gluteus Maximus"
+    ],
+    "secondary_muscles": []
+  },
+  "Stress Incontinence, Perineal Pain": {
+    "region": "Lumbo-Pelvic",
+    "primary_muscles": [
+      "Adductor Magnus",
+      "Piriformis"
+    ],
+    "secondary_muscles": []
+  },
+  "Bladder Pain": {
+    "region": "Lumbo-Pelvic",
+    "primary_muscles": [
+      "Piriformis"
+    ],
+    "secondary_muscles": [
+      "Adductor Magnus"
+    ]
+  },
+  "Anterior Knee Pain": {
+    "region": "Hip, Thigh & Knee",
+    "primary_muscles": [
+      "Adductor Longus",
+      "Adductor Brevis",
+      "Rectus Femoris",
+      "Vastus Intermedius"
+    ],
+    "secondary_muscles": []
+  },
+  "Anterior Thigh Pain": {
+    "region": "Hip, Thigh & Knee",
+    "primary_muscles": [
+      "Adductor Longus",
+      "Adductor Brevis",
+      "Adductor Magnus",
+      "Sartorius"
+    ],
+    "secondary_muscles": [
+      "Pectineus",
+      "Quadratus Lumborum"
+    ]
+  },
+  "Anteromedial Knee Pain": {
+    "region": "Hip, Thigh & Knee",
+    "primary_muscles": [
+      "Vastus Medialis"
+    ],
+    "secondary_muscles": [
+      "Gracilis",
+      "Rectus Femoris",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ]
+  },
+  "Buckling Knee": {
+    "region": "Hip, Thigh & Knee",
+    "primary_muscles": [
+      "Vastus Medialis",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "secondary_muscles": []
+  },
+  "Lateral Knee Pain": {
+    "region": "Hip, Thigh & Knee",
+    "primary_muscles": [
+      "Vastus Lateralis"
+    ],
+    "secondary_muscles": [
+      "Tensor Fasciae Latae"
+    ]
+  },
+  "Lateral Thigh & Hip Pain": {
+    "region": "Hip, Thigh & Knee",
+    "primary_muscles": [
+      "Gluteus Minimus",
+      "Vastus Lateralis",
+      "Piriformis",
+      "Quadratus Lumborum",
+      "Tensor Fasciae Latae"
+    ],
+    "secondary_muscles": []
+  },
+  "Medial Thigh Pain": {
+    "region": "Hip, Thigh & Knee",
+    "primary_muscles": [
+      "Pectineus",
+      "Vastus Medialis",
+      "Gracilis"
+    ],
+    "secondary_muscles": [
+      "Adductor Magnus",
+      "Sartorius"
+    ]
+  },
+  "Numbness/Tingling on the Outer Thigh (Meralgia Paresthetica)": {
+    "region": "Hip, Thigh & Knee",
+    "primary_muscles": [
+      "Vastus Lateralis",
+      "Sartorius",
+      "Tensor Fasciae Latae"
+    ],
+    "secondary_muscles": []
+  },
+  "Posterior Knee Pain": {
+    "region": "Hip, Thigh & Knee",
+    "primary_muscles": [
+      "Gastrocnemius",
+      "Popliteus",
+      "Plantaris",
+      "Hamstring \u2013 Semimembranosus"
+    ],
+    "secondary_muscles": [
+      "Gastrocnemius",
+      "Soleus",
+      "Tibialis Posterior"
+    ]
+  },
+  "Posterior Thigh Pain": {
+    "region": "Hip, Thigh & Knee",
+    "primary_muscles": [
+      "Gluteus Minimus"
+    ],
+    "secondary_muscles": [
+      "Piriformis",
+      "Obturator Internus",
+      "Hamstring \u2013 Semimembranosus"
+    ]
+  },
+  "Problems Climbing Stairs": {
+    "region": "Hip, Thigh & Knee",
+    "primary_muscles": [
+      "Sartorius",
+      "Vastus Medialis",
+      "Vastus Intermedius",
+      "Vastus Lateralis",
+      "Rectus Femoris"
+    ],
+    "secondary_muscles": [
+      "Erector Spinae",
+      "Quadratus Lumborum",
+      "Tibialis Anterior",
+      "Soleus",
+      "Flexor Digitorum Longus",
+      "Flexor Hallucis Longus"
+    ]
+  },
+  "Problems Going Down Stairs": {
+    "region": "Hip, Thigh & Knee",
+    "primary_muscles": [
+      "Popliteus"
+    ],
+    "secondary_muscles": []
+  },
+  "Anterior Ankle Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Tibialis Anterior",
+      "Peroneus Tertius",
+      "Extensor Digitorum Brevis",
+      "Extensor Digitorum Longus"
+    ],
+    "secondary_muscles": [
+      "Extensor Hallucis Longus"
+    ]
+  },
+  "Anterior Leg Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [],
+    "secondary_muscles": [
+      "Tibialis Anterior",
+      "Adductor Longus"
+    ]
+  },
+  "Bunion": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Extensor Hallucis Longus",
+      "Extensor Digitorum Longus",
+      "Flexor Hallucis Longus",
+      "Tibialis Anterior"
+    ],
+    "secondary_muscles": []
+  },
+  "Dorsal Forefoot Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Extensor Digitorum Brevis",
+      "Extensor Hallucis Longus",
+      "Flexor Hallucis Longus",
+      "Extensor Digitorum Longus"
+    ],
+    "secondary_muscles": [
+      "Tibialis Anterior"
+    ]
+  },
+  "Dorsal Great Toe Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Tibialis Anterior"
+    ],
+    "secondary_muscles": [
+      "Extensor Hallucis Longus",
+      "Extensor Digitorum Brevis"
+    ]
+  },
+  "Dorsal Lesser Toe Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [],
+    "secondary_muscles": [
+      "Extensor Digitorum Brevis",
+      "Extensor Digitorum Longus"
+    ]
+  },
+  "First Steps in the Morning Feel as if Walking on Nails": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Tibialis Posterior",
+      "Flexor Digitorum Longus",
+      "Flexor Hallucis Longus"
+    ],
+    "secondary_muscles": []
+  },
+  "Heel Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Soleus",
+      "Quadratus Plantae",
+      "Abductor Hallucis",
+      "Quadratus Plantae"
+    ],
+    "secondary_muscles": [
+      "Tibialis Posterior",
+      "Gastrocnemius"
+    ]
+  },
+  "Lateral Ankle Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Extensor Digitorum Brevis"
+    ],
+    "secondary_muscles": [
+      "Peroneus Tertius"
+    ]
+  },
+  "Lateral Leg Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Gastrocnemius"
+    ],
+    "secondary_muscles": [
+      "Gluteus Minimus",
+      "Peroneus Longus",
+      "Peroneus Brevis",
+      "Vastus Lateralis"
+    ]
+  },
+  "Medial Ankle Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Flexor Hallucis Longus",
+      "Extensor Digitorum Brevis",
+      "Abductor Hallucis",
+      "Extensor Hallucis Longus",
+      "Tibialis Posterior"
+    ],
+    "secondary_muscles": []
+  },
+  "Metatarsal Head Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [],
+    "secondary_muscles": []
+  },
+  "Plantar Great Toe Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Flexor Hallucis Longus"
+    ],
+    "secondary_muscles": [
+      "Flexor Digitorum Longus",
+      "Tibialis Anterior"
+    ]
+  },
+  "Plantar Lesser Toe Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Flexor Digitorum Longus",
+      "Tibialis Posterior"
+    ],
+    "secondary_muscles": []
+  },
+  "Plantar Midfoot Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Gastrocnemius",
+      "Flexor Digitorum Longus",
+      "Abductor Hallucis"
+    ],
+    "secondary_muscles": [
+      "Soleus",
+      "Abductor Hallucis",
+      "Tibialis Posterior"
+    ]
+  },
+  "Posterior Ankle Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Soleus",
+      "Tibialis Posterior"
+    ],
+    "secondary_muscles": []
+  },
+  "Posterior Leg (Calf) Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Soleus",
+      "Gluteus Minimus"
+    ],
+    "secondary_muscles": [
+      "Gastrocnemius",
+      "Soleus",
+      "Flexor Digitorum Longus",
+      "Tibialis Posterior",
+      "Plantaris"
+    ]
+  },
+  "Restless Leg Syndrome": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Soleus",
+      "Gastrocnemius"
+    ],
+    "secondary_muscles": []
+  },
+  "Shin Splint-Type Pain": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Peroneus Tertius",
+      "Tibialis Anterior"
+    ],
+    "secondary_muscles": [
+      "Extensor Digitorum Longus"
+    ]
+  },
+  "Tight Achilles Tendons": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [],
+    "secondary_muscles": []
+  },
+  "Upper/Lower Leg Cramps": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Gastrocnemius"
+    ],
+    "secondary_muscles": []
+  },
+  "Weak Ankles": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Peroneus Tertius"
+    ],
+    "secondary_muscles": []
+  },
+  "Foot Drop": {
+    "region": "Leg, Ankle & Foot",
+    "primary_muscles": [
+      "Tibialis Anterior"
+    ],
+    "secondary_muscles": []
+  }
+}

@@ -1,0 +1,644 @@
+{
+  "Trapezius": [
+    "Back of Head Pain",
+    "Back of Neck Pain",
+    "Cheek Pain (like Sinusitis)",
+    "Headaches or Migraines",
+    "Temple and Eyebrow Pain",
+    "Temporal Headache (Temples)",
+    "TMJ Disorder",
+    "Eye Pain",
+    "Back of Shoulder Pain",
+    "Mid-Thoracic Back Pain",
+    "Upper Thoracic Back Pain",
+    "Thoracic Outlet Syndrome"
+  ],
+  "Sternocleidomastoid": [
+    "Back of Head Pain",
+    "Cheek Pain (like Sinusitis)",
+    "Dizziness & Vertigo",
+    "Ear Pain",
+    "Earaches/Tinnitus (Ringing)/Itch",
+    "Feeling Continued Movement",
+    "Imbalance when Driving",
+    "Frontal Headache",
+    "Headaches or Migraines",
+    "Post Nasal Drip",
+    "Runny Nose",
+    "Sore Throat",
+    "Tearing/Reddening of Eye, Drooping of Eyelid",
+    "Temple and Eyebrow Pain",
+    "Temporal Headache (Temples)",
+    "Temporomandibular Joint (TMJ) Pain",
+    "Throat & Front of Neck Pain",
+    "Blocked Sinus",
+    "Vertex Pain",
+    "Visual Perception Problems",
+    "Dry Cough",
+    "Front of Chest Pain"
+  ],
+  "Splenius Capitis": [
+    "Back of Head Pain",
+    "Headaches or Migraines",
+    "Vertex Pain"
+  ],
+  "Splenius Cervicis": [
+    "Back of Head Pain",
+    "Back of Neck Pain",
+    "Headaches or Migraines",
+    "Temple and Eyebrow Pain",
+    "Temporal Headache (Temples)",
+    "Upper Thoracic Back Pain"
+  ],
+  "Occipitalis": [
+    "Back of Head Pain",
+    "Eye Pain"
+  ],
+  "Digastric": [
+    "Back of Head Pain",
+    "Difficulty Swallowing",
+    "Sore Throat",
+    "Swollen Glands",
+    "Teeth Grinding (Bruxism)",
+    "Throat & Front of Neck Pain",
+    "Blocked Sinus",
+    "Rear Tooth Pain"
+  ],
+  "Temporalis": [
+    "Back of Head Pain",
+    "Headaches or Migraines",
+    "Temple and Eyebrow Pain",
+    "Temporal Headache (Temples)",
+    "Rear Tooth Pain",
+    "Eye Pain",
+    "Bruxism/Grinding"
+  ],
+  "Multifidi": [
+    "Back of Neck Pain",
+    "Mid-Thoracic Back Pain",
+    "Upper Thoracic Back Pain",
+    "Abdominal Pain/Cramps",
+    "Bloating/Nausea/Abdominal Cramps",
+    "Irritable Bowel",
+    "Low Back Pain",
+    "Sacral & Gluteal Pain",
+    "Thoracic Back Pain",
+    "Lumbar Pain",
+    "Iliosacral Pain",
+    "Lower Abdominal Pain"
+  ],
+  "Levator Scapulae": [
+    "Back of Neck Pain",
+    "Stiff Neck",
+    "Back of Shoulder Pain",
+    "Mid-Thoracic Back Pain",
+    "Upper Thoracic Back Pain",
+    "Thoracic Outlet Syndrome",
+    "Problems Holding Arms Up (as when folding sheets)"
+  ],
+  "Masseter": [
+    "Cheek Pain (like Sinusitis)",
+    "Ear Pain",
+    "Earaches/Tinnitus (Ringing)/Itch",
+    "Teeth Grinding (Bruxism)",
+    "Temple and Eyebrow Pain",
+    "Temporomandibular Joint (TMJ) Pain",
+    "TMJ Disorder",
+    "Rear Tooth Pain",
+    "Bruxism/Grinding",
+    "Blocked Ear"
+  ],
+  "Lateral Pterygoid": [
+    "Cheek Pain (like Sinusitis)",
+    "Difficulty Swallowing",
+    "Earaches/Tinnitus (Ringing)/Itch",
+    "Post Nasal Drip",
+    "Runny Nose",
+    "Sore Throat",
+    "Temporomandibular Joint (TMJ) Pain",
+    "TMJ Disorder",
+    "Blocked Sinus",
+    "Blocked Ear"
+  ],
+  "Medial Pterygoid": [
+    "Cheek Pain (like Sinusitis)",
+    "Difficulty Swallowing",
+    "Drooling in Sleep",
+    "Earaches/Tinnitus (Ringing)/Itch",
+    "Post Nasal Drip",
+    "Runny Nose",
+    "Sore Throat",
+    "Temporomandibular Joint (TMJ) Pain",
+    "TMJ Disorder",
+    "Throat & Front of Neck Pain",
+    "Blocked Sinus",
+    "Blocked Ear"
+  ],
+  "Longus Colli": [
+    "Difficulty Swallowing"
+  ],
+  "Semispinalis Capitis": [
+    "Frontal Headache",
+    "Temporal Headache (Temples)"
+  ],
+  "Frontalis": [
+    "Frontal Headache",
+    "Headaches or Migraines"
+  ],
+  "Soleus": [
+    "Teeth Grinding (Bruxism)",
+    "Posterior Knee Pain",
+    "Problems Climbing Stairs",
+    "Heel Pain",
+    "Plantar Midfoot Pain",
+    "Posterior Ankle Pain",
+    "Posterior Leg (Calf) Pain",
+    "Restless Leg Syndrome"
+  ],
+  "Scalenes": [
+    "Back of Arm Pain",
+    "Front of Arm Pain",
+    "Front of Shoulder Pain",
+    "Mid-Thoracic Back Pain",
+    "Upper Thoracic Back Pain",
+    "Thoracic Outlet Syndrome",
+    "Painful Weak Grip",
+    "Radial Forearm Pain",
+    "Thumb & Radial Hand Pain",
+    "Front of Chest Pain"
+  ],
+  "Teres Major": [
+    "Back of Arm Pain",
+    "Back of Shoulder Pain",
+    "Thoracic Outlet Syndrome"
+  ],
+  "Triceps Brachii": [
+    "Back of Arm Pain",
+    "Back of Shoulder Pain",
+    "Front of Arm Pain",
+    "Upper Thoracic Back Pain",
+    "Thoracic Outlet Syndrome",
+    "Lateral Epicondylar Pain",
+    "Medial Epicondylar Pain",
+    "Olecranon Pain",
+    "Volar Finger Pain"
+  ],
+  "Deltoid": [
+    "Back of Arm Pain",
+    "Back of Shoulder Pain",
+    "Front of Arm Pain",
+    "Front of Shoulder Pain"
+  ],
+  "Subscapularis": [
+    "Back of Arm Pain",
+    "Back of Shoulder Pain",
+    "Thoracic Outlet Syndrome",
+    "Problems Holding Arms Up (as when folding sheets)"
+  ],
+  "Supraspinatus": [
+    "Back of Arm Pain",
+    "Back of Shoulder Pain",
+    "Front of Arm Pain",
+    "Front of Shoulder Pain",
+    "Upper Thoracic Back Pain",
+    "Lateral Epicondylar Pain",
+    "Problems Holding Arms Up (as when folding sheets)",
+    "Radial Forearm Pain"
+  ],
+  "Teres Minor": [
+    "Back of Arm Pain",
+    "Back of Shoulder Pain"
+  ],
+  "Latissimus Dorsi": [
+    "Back of Arm Pain",
+    "Back of Shoulder Pain",
+    "Front of Shoulder Pain",
+    "Mid-Thoracic Back Pain",
+    "Thoracic Outlet Syndrome",
+    "Ulnar Forearm Pain",
+    "Volar Finger Pain",
+    "Volar Wrist & Palmar Pain",
+    "Side of Chest Pain",
+    "Thoracic Back Pain"
+  ],
+  "Serratus anterior": [
+    "Back of Arm Pain"
+  ],
+  "Coracobrachialis": [
+    "Back of Arm Pain",
+    "Front of Shoulder Pain"
+  ],
+  "Serratus Anterior": [
+    "Back of Shoulder Pain",
+    "Mid-Thoracic Back Pain",
+    "Medial Epicondylar Pain",
+    "Shortness of Breath/Stitch-in-the-side",
+    "Side of Chest Pain"
+  ],
+  "Biceps Brachii": [
+    "Front of Arm Pain",
+    "Front of Shoulder Pain",
+    "Upper Thoracic Back Pain"
+  ],
+  "Subclavius": [
+    "Front of Arm Pain",
+    "Front of Shoulder Pain",
+    "Radial Forearm Pain",
+    "Thumb & Radial Hand Pain",
+    "Front of Chest Pain"
+  ],
+  "Infraspinatus": [
+    "Front of Arm Pain",
+    "Front of Shoulder Pain",
+    "Mid-Thoracic Back Pain",
+    "Painful Weak Grip",
+    "Problems Holding Arms Up (as when folding sheets)",
+    "Radial Forearm Pain",
+    "Thumb & Radial Hand Pain"
+  ],
+  "Brachialis": [
+    "Front of Arm Pain",
+    "Thumb & Radial Hand Pain",
+    "Thumb Pain and Tingling Numbness (Dysesthesia)"
+  ],
+  "Pectoralis Major": [
+    "Front of Shoulder Pain",
+    "Thoracic Outlet Syndrome",
+    "Medial Epicondylar Pain",
+    "Ulnar Forearm Pain",
+    "Volar Wrist & Palmar Pain",
+    "Front of Chest Pain",
+    "Hypersensitive Nipples/Breast Pain",
+    "Rapid/Fluttery/Irregular Heartbeat/Heart Attack-like Pain"
+  ],
+  "Pectoralis Minimus": [
+    "Front of Shoulder Pain",
+    "Thoracic Outlet Syndrome"
+  ],
+  "Rectus Abdominis": [
+    "Mid-Thoracic Back Pain",
+    "Abdominal Pain/Cramps",
+    "Appendicitis-like Pains",
+    "Bloating/Nausea/Abdominal Cramps",
+    "Lax, Pendulus Abdomen",
+    "Low Back Pain",
+    "Nausea & Vomiting",
+    "Thoracic Back Pain",
+    "Urinary Frequency, Urine Retention, \"Kidney\" Pain",
+    "Lumbar Pain",
+    "Buttock Pain",
+    "Colic",
+    "Dysmenorrhea",
+    "Iliosacral Pain",
+    "Lower Abdominal Pain"
+  ],
+  "Rhomboid": [
+    "Mid-Thoracic Back Pain",
+    "Upper Thoracic Back Pain"
+  ],
+  "Serratus Posterior Superior": [
+    "Mid-Thoracic Back Pain"
+  ],
+  "Adductor Pollicis": [
+    "Handwriting Difficulties",
+    "Thumb & Radial Hand Pain",
+    "Thumb Pain and Tingling Numbness (Dysesthesia)",
+    "Texters Thumb"
+  ],
+  "Opponens Pollicis": [
+    "Handwriting Difficulties",
+    "Thumb & Radial Hand Pain",
+    "Thumb Pain and Tingling Numbness (Dysesthesia)",
+    "Volar Wrist & Palmar Pain",
+    "Texters Thumb"
+  ],
+  "Supinator": [
+    "Lateral Epicondylar Pain",
+    "Thumb & Radial Hand Pain"
+  ],
+  "Brachioradialis": [
+    "Lateral Epicondylar Pain",
+    "Painful Weak Grip",
+    "Radial Forearm Pain",
+    "Thumb & Radial Hand Pain",
+    "Writer's Cramp",
+    "Texters Thumb"
+  ],
+  "Extensor Carpi Radialis Longus": [
+    "Lateral Epicondylar Pain",
+    "Thumb & Radial Hand Pain",
+    "Writer's Cramp",
+    "Texters Thumb"
+  ],
+  "Extensor Digitorum": [
+    "Lateral Epicondylar Pain",
+    "Painful Weak Grip",
+    "Writer's Cramp",
+    "Texters Thumb"
+  ],
+  "Anconeus": [
+    "Lateral Epicondylar Pain"
+  ],
+  "Pectoralis Minor": [
+    "Medial Epicondylar Pain",
+    "Ulnar Forearm Pain",
+    "Volar Wrist & Palmar Pain",
+    "Front of Chest Pain",
+    "Hypersensitive Nipples/Breast Pain"
+  ],
+  "Flexor Pollicis Longus": [
+    "Thumb & Radial Hand Pain"
+  ],
+  "Flexor Digitorum Superficialis": [
+    "Volar Finger Pain"
+  ],
+  "Abductor Digiti Minimi": [
+    "Volar Finger Pain"
+  ],
+  "Palmaris Longus": [
+    "Volar Finger Pain",
+    "Volar Wrist & Palmar Pain"
+  ],
+  "Pronator Teres": [
+    "Volar Finger Pain",
+    "Volar Wrist & Palmar Pain"
+  ],
+  "Extensor Carpi Radialis Brevis": [
+    "Volar Wrist & Palmar Pain",
+    "Writer's Cramp",
+    "Texters Thumb"
+  ],
+  "Extensor Carpi Ulnaris": [
+    "Volar Wrist & Palmar Pain"
+  ],
+  "Iliocostalis Thoracis": [
+    "Abdominal Pain/Cramps",
+    "Appendicitis-like Pains",
+    "Bloating/Nausea/Abdominal Cramps",
+    "Low Back Pain",
+    "Thoracic Back Pain"
+  ],
+  "Obliquus Internus Abdominis": [
+    "Abdominal Pain/Cramps",
+    "Diarrhea",
+    "Front of Chest Pain",
+    "Irritable Bowel",
+    "Lax, Pendulus Abdomen",
+    "Menstrual Problems, Pelvic Pain",
+    "Reflux Esophagitis",
+    "Urinary Frequency, Urine Retention, \"Kidney\" Pain",
+    "Reflux"
+  ],
+  "Quadratus Lumborum": [
+    "Abdominal Pain/Cramps",
+    "Bloating/Nausea/Abdominal Cramps",
+    "Low Back Pain",
+    "Buttock Pain",
+    "Iliosacral Pain",
+    "Lower Abdominal Pain",
+    "Anterior Thigh Pain",
+    "Lateral Thigh & Hip Pain",
+    "Problems Climbing Stairs"
+  ],
+  "Piriformis": [
+    "Appendicitis-like Pains",
+    "Lower Pain",
+    "Buttock Pain",
+    "Impotence due to Nerve Entrapments",
+    "Pelvic Pain",
+    "Sciatica",
+    "Stress Incontinence, Perineal Pain",
+    "Bladder Pain",
+    "Lateral Thigh & Hip Pain",
+    "Posterior Thigh Pain"
+  ],
+  "Iliocostalis Lumborum": [
+    "Appendicitis-like Pains",
+    "Bloating/Nausea/Abdominal Cramps",
+    "Low Back Pain",
+    "Sacral & Gluteal Pain"
+  ],
+  "Longissimus Thoracis": [
+    "Bloating/Nausea/Abdominal Cramps",
+    "Low Back Pain",
+    "Sacral & Gluteal Pain"
+  ],
+  "Levator Ani": [
+    "Menstrual Problems, Pelvic Pain",
+    "Anal Pain and Painful Bowel Movements",
+    "Iliosacral Pain",
+    "Pelvic Pain"
+  ],
+  "Adductor Magnus": [
+    "Menstrual Problems, Pelvic Pain",
+    "Groin Pain",
+    "Pelvic Pain",
+    "Stress Incontinence, Perineal Pain",
+    "Bladder Pain",
+    "Anterior Thigh Pain",
+    "Medial Thigh Pain"
+  ],
+  "Obturator Internus": [
+    "Menstrual Problems, Pelvic Pain",
+    "Pelvic Pain",
+    "Posterior Thigh Pain"
+  ],
+  "Serratus Posterior Inferior": [
+    "Menstrual Problems, Pelvic Pain",
+    "Thoracic Back Pain"
+  ],
+  "Intercostals": [
+    "Side of Chest Pain",
+    "Thoracic Back Pain"
+  ],
+  "Erector Spinae": [
+    "Lumbar Pain",
+    "Lower Pain",
+    "Problems Climbing Stairs"
+  ],
+  "Iliopsoas (Psoas)": [
+    "Lumbar Pain"
+  ],
+  "Gluteus Medius": [
+    "Lumbar Pain",
+    "Lower Pain",
+    "Buttock Pain",
+    "Iliosacral Pain"
+  ],
+  "Psoas Major": [
+    "Lower Pain"
+  ],
+  "Gluteus Maximus": [
+    "Buttock Pain",
+    "Iliosacral Pain",
+    "Impotence due to Nerve Entrapments",
+    "Sciatica"
+  ],
+  "Gluteus Minimus": [
+    "Buttock Pain",
+    "Sciatica",
+    "Lateral Thigh & Hip Pain",
+    "Posterior Thigh Pain",
+    "Lateral Leg Pain",
+    "Posterior Leg (Calf) Pain"
+  ],
+  "Obliquus Externus Abdominis": [
+    "Groin Pain",
+    "Lower Abdominal Pain"
+  ],
+  "Adductor Longus": [
+    "Anterior Knee Pain",
+    "Anterior Thigh Pain",
+    "Anteromedial Knee Pain",
+    "Buckling Knee",
+    "Anterior Leg Pain"
+  ],
+  "Adductor Brevis": [
+    "Anterior Knee Pain",
+    "Anterior Thigh Pain",
+    "Anteromedial Knee Pain",
+    "Buckling Knee"
+  ],
+  "Rectus Femoris": [
+    "Anterior Knee Pain",
+    "Anteromedial Knee Pain",
+    "Problems Climbing Stairs"
+  ],
+  "Vastus Intermedius": [
+    "Anterior Knee Pain",
+    "Problems Climbing Stairs"
+  ],
+  "Sartorius": [
+    "Anterior Thigh Pain",
+    "Anteromedial Knee Pain",
+    "Medial Thigh Pain",
+    "Numbness/Tingling on the Outer Thigh (Meralgia Paresthetica)",
+    "Problems Climbing Stairs"
+  ],
+  "Pectineus": [
+    "Anterior Thigh Pain",
+    "Medial Thigh Pain"
+  ],
+  "Vastus Medialis": [
+    "Anteromedial Knee Pain",
+    "Buckling Knee",
+    "Medial Thigh Pain",
+    "Problems Climbing Stairs"
+  ],
+  "Gracilis": [
+    "Anteromedial Knee Pain",
+    "Medial Thigh Pain"
+  ],
+  "Vastus Lateralis": [
+    "Lateral Knee Pain",
+    "Lateral Thigh & Hip Pain",
+    "Numbness/Tingling on the Outer Thigh (Meralgia Paresthetica)",
+    "Problems Climbing Stairs",
+    "Lateral Leg Pain"
+  ],
+  "Tensor Fasciae Latae": [
+    "Lateral Knee Pain",
+    "Lateral Thigh & Hip Pain",
+    "Numbness/Tingling on the Outer Thigh (Meralgia Paresthetica)"
+  ],
+  "Gastrocnemius": [
+    "Posterior Knee Pain",
+    "Heel Pain",
+    "Lateral Leg Pain",
+    "Plantar Midfoot Pain",
+    "Posterior Leg (Calf) Pain",
+    "Restless Leg Syndrome",
+    "Upper/Lower Leg Cramps"
+  ],
+  "Popliteus": [
+    "Posterior Knee Pain",
+    "Problems Going Down Stairs"
+  ],
+  "Plantaris": [
+    "Posterior Knee Pain",
+    "Posterior Leg (Calf) Pain"
+  ],
+  "Hamstring \u2013 Semimembranosus": [
+    "Posterior Knee Pain",
+    "Posterior Thigh Pain"
+  ],
+  "Tibialis Posterior": [
+    "Posterior Knee Pain",
+    "First Steps in the Morning Feel as if Walking on Nails",
+    "Heel Pain",
+    "Medial Ankle Pain",
+    "Plantar Lesser Toe Pain",
+    "Plantar Midfoot Pain",
+    "Posterior Ankle Pain",
+    "Posterior Leg (Calf) Pain"
+  ],
+  "Tibialis Anterior": [
+    "Problems Climbing Stairs",
+    "Anterior Ankle Pain",
+    "Anterior Leg Pain",
+    "Bunion",
+    "Dorsal Forefoot Pain",
+    "Dorsal Great Toe Pain",
+    "Plantar Great Toe Pain",
+    "Shin Splint-Type Pain",
+    "Foot Drop"
+  ],
+  "Flexor Digitorum Longus": [
+    "Problems Climbing Stairs",
+    "First Steps in the Morning Feel as if Walking on Nails",
+    "Plantar Great Toe Pain",
+    "Plantar Lesser Toe Pain",
+    "Plantar Midfoot Pain",
+    "Posterior Leg (Calf) Pain"
+  ],
+  "Flexor Hallucis Longus": [
+    "Problems Climbing Stairs",
+    "Bunion",
+    "Dorsal Forefoot Pain",
+    "First Steps in the Morning Feel as if Walking on Nails",
+    "Medial Ankle Pain",
+    "Plantar Great Toe Pain"
+  ],
+  "Peroneus Tertius": [
+    "Anterior Ankle Pain",
+    "Lateral Ankle Pain",
+    "Shin Splint-Type Pain",
+    "Weak Ankles"
+  ],
+  "Extensor Digitorum Brevis": [
+    "Anterior Ankle Pain",
+    "Dorsal Forefoot Pain",
+    "Dorsal Great Toe Pain",
+    "Dorsal Lesser Toe Pain",
+    "Lateral Ankle Pain",
+    "Medial Ankle Pain"
+  ],
+  "Extensor Digitorum Longus": [
+    "Anterior Ankle Pain",
+    "Bunion",
+    "Dorsal Forefoot Pain",
+    "Dorsal Lesser Toe Pain",
+    "Shin Splint-Type Pain"
+  ],
+  "Extensor Hallucis Longus": [
+    "Anterior Ankle Pain",
+    "Bunion",
+    "Dorsal Forefoot Pain",
+    "Dorsal Great Toe Pain",
+    "Medial Ankle Pain"
+  ],
+  "Quadratus Plantae": [
+    "Heel Pain"
+  ],
+  "Abductor Hallucis": [
+    "Heel Pain",
+    "Medial Ankle Pain",
+    "Plantar Midfoot Pain"
+  ],
+  "Peroneus Longus": [
+    "Lateral Leg Pain"
+  ],
+  "Peroneus Brevis": [
+    "Lateral Leg Pain"
+  ]
+}
