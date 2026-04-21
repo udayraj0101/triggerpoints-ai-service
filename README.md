@@ -1,269 +1,245 @@
-# TriggerPoints AI Service
+# TriggerPoints AI — Backend
 
-FastAPI microservice for AI-powered trigger point therapy chatbot. Powered by Google Gemini, FAISS vector search, and Redis.
+FastAPI backend for the TriggerPoints3D AI chatbot. Powered by Google Gemini, MongoDB Atlas (vector search + data storage), and PM2 + Uvicorn for process management.
 
-**Python 3.10+** | **FastAPI** | **Docker** | **Redis** | **Gemini API**
+**Python 3.11+** | **FastAPI** | **MongoDB Atlas** | **Gemini API** | **PM2 + Uvicorn**
 
-## Features
+---
 
-- 🤖 AI responses via Google Gemini 1.5 Flash
-- 💾 Redis session memory & query caching
-- 📊 50+ muscle database with trigger points
-- 📚 FAISS vector search for knowledge retrieval
-- 🔐 API key auth + rate limiting
-- ⚡ Fast responses (<10ms cached, 2-5s new)
-- 🐳 Docker & Docker Compose included
-- 📡 Streaming endpoint support
+## Tech Stack
 
-## 📋 Tech Stack
+| Component | Technology |
+|-----------|------------|
+| API Framework | FastAPI |
+| AI Model | Google Gemini 2.5 Flash |
+| Embeddings | Gemini Embedding 004 |
+| Vector Search | MongoDB Atlas Vector Search |
+| Database | MongoDB Atlas |
+| Server | Uvicorn |
+| Process Manager | PM2 |
+| Rate Limiting | SlowAPI |
 
-| Component | Technology | Version |
-|-----------|------------|---------|
-| API Framework | FastAPI | 0.111+ |
-| AI Model | Google Gemini | 1.5 Flash |
-| Vector Search | FAISS | 1.8.0+ |
-| Session/Cache | Redis | 5.0+ |
-| Data Processing | Pandas | 2.0+ |
-| Server | Uvicorn | 0.29+ |
-| Rate Limiting | SlowAPI | 0.1.9+ |
-
-## Prerequisites
-
-- Python 3.10+
-- Redis 5.0+
-- Google Gemini API Key (free at https://aistudio.google.com/app/apikey)
-- Docker (optional, for Redis)
-
-## Setup (5 minutes)
-
-### 1. Clone & Install
-
-```bash
-git clone https://github.com/YOUR_REPO/triggerpoints-ai-service.git
-cd triggerpoints-ai-service
-python -m venv venv
-source venv/bin/activate  # macOS/Linux
-# or venv\Scripts\activate  # Windows
-pip install -r requirements.txt
-```
-
-### 2. Configure
-
-```bash
-cp .env.example .env
-# Edit .env and add:
-# GEMINI_API_KEY=your_key_here
-# API_KEY=your_api_key_here
-```
-
-### 3. Start Redis
-
-```bash
-# Docker (recommended)
-docker-compose up -d
-
-# Or install locally: brew install redis (macOS) / apt install redis-server (Linux)
-redis-cli ping  # Should return PONG
-```
-
-### 4. Run Server
-
-```bash
-uvicorn app.main:app --reload --port 8000
-```
-
-Visit http://localhost:8000/docs for API documentation
-
-## Data Processing
-
-Before deployment, process your data files:
-
-### Parse Excel Database
-
-```bash
-python scripts/parse_excel.py
-```
-
-This extracts muscle and symptom data from `app/data/raw/symptoms.xlsx` and creates:
-- `app/data/processed/muscles.json`
-- `app/data/processed/symptoms.json`
-- `app/data/processed/regions.json`
-
-### Process PDF & Build FAISS Index
-
-```bash
-python scripts/process_pdf.py
-```
-
-This:
-- Reads trigger point data from `app/data/raw/ebook_data.json`
-- Generates embeddings via Gemini API
-- Builds FAISS vector index at `app/data/faiss_index/index.faiss`
-- Creates chunks metadata at `app/data/faiss_index/chunks.json`
-
-**Note**: Requires GEMINI_API_KEY in .env
-
-### Full Data Pipeline
-
-```bash
-# Parse Excel
-python scripts/parse_excel.py
-
-# Build vector index
-python scripts/process_pdf.py
-
-# Verify
-ls -la app/data/processed/
-ls -la app/data/faiss_index/
-```
-
-## API Endpoints
-
-### Chat
-
-```bash
-curl -X POST http://localhost:8000/chat \
-  -H "X-API-Key: your_api_key" \
-  -H "Content-Type: application/json" \
-  -d '{"user_id":"user1","query":"What causes shoulder pain?"}'
-```
-
-Response:
-```json
-{
-  "response": "Shoulder pain typically originates from...",
-  "related_muscles": ["Trapezius", "Rotator Cuff"],
-  "confidence": 0.95
-}
-```
-
-### Stream
-
-```bash
-curl -X POST http://localhost:8000/stream \
-  -H "X-API-Key: your_api_key" \
-  -d '{"user_id":"user1","query":"question here"}'
-```
-
-### Health
-
-```bash
-curl http://localhost:8000/health
-```
-
-### Documentation
-
-- **Swagger UI**: http://localhost:8000/docs
-- **ReDoc**: http://localhost:8000/redoc
-
-## Environment Variables
-
-**Required:**
-```env
-GEMINI_API_KEY=your_gemini_key
-API_KEY=your_api_key
-```
-
-**Optional:**
-```env
-REDIS_URL=redis://localhost:6379/0
-CACHE_TTL=86400
-SESSION_MEMORY_LIMIT=3
-GEMINI_MODEL=gemini-1.5-flash
-```
-
-See `.env.example` for all options.
-
-## Deployment
-
-### Docker
-
-```bash
-docker build -t triggerpoints-ai .
-docker run -d -p 8000:8000 \
-  -e GEMINI_API_KEY=xxx \
-  -e API_KEY=xxx \
-  -e REDIS_URL=redis://redis:6379 \
-  triggerpoints-ai
-```
-
-### Production (local)
-
-```bash
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 4
-```
-
-### Cloud Options
-
-- **Render**: Connect GitHub → Deploy
-- **Railway**: Connect GitHub → Add Redis add-on → Deploy
-- **Google Cloud Run**: `gcloud run deploy --source .`
-- **AWS**: Deploy to EC2/ECS with RDS Redis
-
-## Troubleshooting
-
-| Issue | Fix |
-|-------|-----|
-| Redis connection refused | `docker-compose up -d` |
-| 401 API key error | Check `.env` file |
-| Port 8000 in use | `lsof -i :8000` and kill process |
-| Import errors | `pip install -r requirements.txt --upgrade` |
-| FAISS index missing | Run `python scripts/process_pdf.py` |
+---
 
 ## Project Structure
 
 ```
 app/
-├── main.py              # FastAPI app
-├── config/settings.py   # Configuration
-├── routes/              # API endpoints
-├── services/            # Business logic
-├── middleware/          # Rate limiting
-└── utils/              # Helper functions
-
-data/
-├── raw/                 # Excel & JSON data
-├── processed/          # Processed outputs
-└── faiss_index/        # Vector database
+├── main.py                  # FastAPI app entry point
+├── config/settings.py       # All configuration
+├── routes/
+│   ├── chat.py              # POST /chat endpoint
+│   └── stream.py            # POST /stream-chat endpoint
+├── services/
+│   ├── mongo_service.py     # MongoDB connection + collections
+│   ├── muscle_service.py    # Muscle lookup + alias resolution
+│   ├── symptom_service.py   # Symptom lookup
+│   ├── vector_service.py    # Atlas Vector Search (RAG)
+│   └── session_service.py   # Conversation history + context
+├── utils/
+│   ├── intent_detector.py   # Flow A / Flow B / Hybrid / App Help / Knowledge
+│   ├── navigation_builder.py # Step-by-step app navigation instructions
+│   └── prompt_builder.py    # Gemini prompt construction
 
 scripts/
-├── parse_excel.py      # Extract Excel data
-└── process_pdf.py      # Build vector index
-
-requirements.txt        # Dependencies
-docker-compose.yml      # Docker setup
-.env.example           # Configuration template
+├── seed_all.py              # Run full data pipeline (one command)
+├── seed_symptoms.py         # symptoms.xlsx → MongoDB
+├── extract_muscles.py       # ebook_data.json → MongoDB (Gemini-normalized)
+└── seed_knowledge.py        # ebook chunks + embeddings → MongoDB
 ```
 
-## Architecture
+---
 
+## Local Development Setup
+
+### 1. Clone & install
+
+```bash
+git clone https://github.com/YOUR_REPO/triggerpoints-ai-service.git
+cd triggerpoints-ai-service
+python -m venv venv
+source venv/bin/activate        # macOS/Linux
+# venv\Scripts\activate         # Windows
+pip install -r requirements.txt
 ```
-Request → Auth → Rate Limit → Cache Check
-                        ↓ miss
-Classify → Retrieve Data → Build Prompt → Gemini API
-                        ↓
-Cache → Memory → Response
+
+### 2. Configure environment
+
+```bash
+cp .env.example .env
 ```
 
-Query types:
-- **Symptom** (80%) - Excel + FAISS lookup
-- **Navigation** (10%) - Rules-based 
-- **General** (10%) - FAISS only
+Edit `.env`:
 
-## Security
+```env
+GEMINI_API_KEY=your_gemini_key
+API_KEY=your_api_key
+MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/?retryWrites=true&w=majority
+MONGODB_DB=triggerpoints
+```
 
-- API key required for all endpoints
-- Rate limit: 10 req/min per user
-- Configure secrets in `.env` (never commit)
-- Use HTTPS in production
-- Rotate API keys monthly
+### 3. Run data pipeline (one time only)
 
-## License
+```bash
+python -m scripts.seed_all
+```
 
-MIT - See [LICENSE](LICENSE)
+This runs three steps:
+- `seed_symptoms` — reads `symptoms.xlsx` → MongoDB `symptoms` collection
+- `extract_muscles` — reads `ebook_data.json`, uses Gemini to normalize each muscle page → MongoDB `muscles` collection
+- `seed_knowledge` — chunks all prose/table/protocol pages, embeds with Gemini → MongoDB `knowledge_chunks` collection
 
-## Support
+Takes ~5 minutes. Re-runs are safe — already-embedded chunks are skipped.
 
-- **Issues**: GitHub Issues
-- **Docs**: See EXPLANATION.md for technical details
-- **Health Check**: `GET /health`
+### 4. Create Atlas Vector Search index (one time, in Atlas UI)
+
+1. Go to MongoDB Atlas → your cluster → **Atlas Search**
+2. Click **Create Search Index** → **JSON Editor**
+3. Collection: `triggerpoints.knowledge_chunks`
+4. Index name: `vector_index`
+5. Paste:
+
+```json
+{
+  "fields": [{
+    "type": "vector",
+    "path": "embedding",
+    "numDimensions": 3072,
+    "similarity": "cosine"
+  }]
+}
+```
+
+### 5. Run locally
+
+```bash
+uvicorn app.main:app --reload --port 8010
+```
+
+API docs: http://localhost:8010/docs
+
+---
+
+## Server Deployment with PM2 + Uvicorn
+
+### Prerequisites on server
+
+```bash
+# Python 3.11+
+sudo apt update && sudo apt install python3.11 python3.11-venv python3-pip -y
+
+# Node.js + PM2
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install nodejs -y
+sudo npm install -g pm2
+```
+
+### Deploy steps
+
+```bash
+# 1. Clone repo
+git clone https://github.com/YOUR_REPO/triggerpoints-ai-service.git
+cd triggerpoints-ai-service
+
+# 2. Create virtualenv and install dependencies
+python3.11 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+# 3. Create .env
+cp .env.example .env
+nano .env   # fill in GEMINI_API_KEY, API_KEY, MONGODB_URI
+
+# 4. Run data pipeline (only needed once)
+python -m scripts.seed_all
+
+# 5. Create logs directory
+mkdir -p logs
+
+# 6. Update ecosystem.config.cjs with correct server paths, then start
+pm2 start ecosystem.config.cjs --only triggerpoints-backend
+
+# 7. Save PM2 process list and enable startup on reboot
+pm2 save
+pm2 startup   # follow the printed command
+```
+
+### PM2 commands
+
+```bash
+pm2 status                          # check running processes
+pm2 logs triggerpoints-backend      # view backend logs
+pm2 restart triggerpoints-backend   # restart backend
+pm2 stop triggerpoints-backend      # stop backend
+pm2 reload triggerpoints-backend    # zero-downtime reload
+```
+
+### Update deployed code
+
+```bash
+cd triggerpoints-ai-service
+git pull origin main
+source venv/bin/activate
+pip install -r requirements.txt
+pm2 restart triggerpoints-backend
+```
+
+---
+
+## API Endpoints
+
+| Method | Path | Description |
+|--------|------|-------------|
+| POST | `/chat` | Main chat endpoint |
+| POST | `/stream-chat` | SSE streaming chat |
+| GET | `/health` | Health check |
+
+All endpoints except `/health` require header: `X-API-Key: your_api_key`
+
+### Chat example
+
+```bash
+curl -X POST http://localhost:8010/chat \
+  -H "X-API-Key: your_api_key" \
+  -H "Content-Type: application/json" \
+  -d '{"user_id":"user1","query":"I have neck pain"}'
+```
+
+Response:
+```json
+{
+  "intent": "FLOW_A",
+  "answer": "Neck pain is commonly caused by...",
+  "muscles": ["Trapezius", "Levator Scapulae"],
+  "navigation": "Step 1: Tap the Symptoms screen...",
+  "muscle_found": null,
+  "symptom_found": "Back of Neck Pain"
+}
+```
+
+---
+
+## Environment Variables
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `GEMINI_API_KEY` | Yes | Google Gemini API key |
+| `API_KEY` | Yes | Auth key for all endpoints |
+| `MONGODB_URI` | Yes | MongoDB Atlas connection string |
+| `MONGODB_DB` | No | Database name (default: triggerpoints) |
+| `GEMINI_MODEL` | No | Chat model (default: gemini-2.5-flash) |
+| `GEMINI_EMBEDDING_MODEL` | No | Embedding model (default: gemini-embedding-004) |
+| `SESSION_MEMORY_LIMIT` | No | Messages per session (default: 6) |
+
+---
+
+## Troubleshooting
+
+| Issue | Fix |
+|-------|-----|
+| MongoDB connection failed | Check `MONGODB_URI` in `.env` |
+| 401 Unauthorized | Check `API_KEY` matches in `.env` |
+| Port 8010 in use | `lsof -i :8010` then kill the process |
+| Vector search returns nothing | Create Atlas Vector Search index (step 4 above) |
+| Import errors | `pip install -r requirements.txt --upgrade` |
+| PM2 not found | `npm install -g pm2` |

@@ -11,17 +11,16 @@ API_KEY = os.getenv("API_KEY", "")
 
 # Gemini API
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
-GEMINI_EMBEDDING_MODEL = os.getenv("GEMINI_EMBEDDING_MODEL", "gemini-embedding-004")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+GEMINI_EMBEDDING_MODEL = os.getenv("GEMINI_EMBEDDING_MODEL", "gemini-embedding-001")
 
-# Redis Cache Configuration
-REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
-CACHE_TTL = int(os.getenv("CACHE_TTL", "86400"))  # 24 hours default
-USE_REDIS = os.getenv("USE_REDIS", "true").lower() == "true"
+# MongoDB
+MONGODB_URI = os.getenv("MONGODB_URI", "")
+MONGODB_DB = os.getenv("MONGODB_DB", "triggerpoints")
 
 # Query Classification
 ENABLE_ML_CLASSIFIER = os.getenv("ENABLE_ML_CLASSIFIER", "true").lower() == "true"
-CLASSIFIER_MODEL = os.getenv("CLASSIFIER_MODEL", "gemini-2.0-flash")
+CLASSIFIER_MODEL = os.getenv("CLASSIFIER_MODEL", "gemini-2.5-flash")
 
 DATA_RAW = BASE_DIR / "data" / "raw"
 DATA_PROCESSED = BASE_DIR / "data" / "processed"
@@ -36,4 +35,5 @@ REGIONS_JSON = DATA_PROCESSED / "regions.json"
 
 CHUNK_SIZE_WORDS = 350
 TOP_K_RESULTS = 5
-SESSION_MEMORY_LIMIT = 3
+SESSION_MEMORY_LIMIT = 6
+EMBEDDING_DIMENSIONS = 3072  # gemini-embedding-004 output size
