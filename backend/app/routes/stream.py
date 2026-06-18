@@ -30,13 +30,17 @@ async def generate_stream(user_id: str, query: str) -> AsyncGenerator[str, None]
         context = session_service.get_context(user_id)
         history = session_service.get_history(user_id)
 
-        muscle_doc = muscle_service.extract_muscle_from_query(query)
-        symptom_doc = symptom_service.extract_symptom_from_query(query)
+        muscle_doc = None
+        symptom_doc = None
+        symptom_alternatives: list[str] = []
+        if intent in ("FLOW_A", "FLOW_B", "HYBRID"):
+            muscle_doc = muscle_service.extract_muscle_from_query(query)
+            symptom_doc, symptom_alternatives = symptom_service.resolve_symptom_from_query(query)
 
         if not muscle_doc and not symptom_doc:
-            if intent in ("FLOW_B", "HYBRID") and context.get("last_muscle"):
+            if intent in ("FLOW_B", "HYBRID", "APP_HELP") and context.get("last_muscle"):
                 muscle_doc = muscle_service.find_muscle(context["last_muscle"])
-            elif intent == "FLOW_A" and context.get("last_symptom"):
+            elif intent in ("FLOW_A", "APP_HELP") and context.get("last_symptom"):
                 symptom_doc = symptom_service.find_symptom(context["last_symptom"])
 
         if intent == "FLOW_A" and muscle_doc and not symptom_doc:
@@ -47,9 +51,9 @@ async def generate_stream(user_id: str, query: str) -> AsyncGenerator[str, None]
             navigation = build_flow_b(muscle_doc, query)
         elif intent == "HYBRID" and muscle_doc:
             navigation = build_flow_b(muscle_doc, query)
-        elif intent == "FLOW_A" and symptom_doc:
+        elif intent == "FLOW_A" and symptom_doc and not symptom_alternatives:
             navigation = build_flow_a(symptom_doc)
-        elif intent == "FLOW_A":
+        elif intent == "FLOW_A" and not symptom_doc:
             navigation = build_flow_a_unknown(query)
         elif intent == "APP_HELP":
             navigation = build_app_help(query)
@@ -71,6 +75,7 @@ async def generate_stream(user_id: str, query: str) -> AsyncGenerator[str, None]
             symptom_doc=symptom_doc,
             rag_chunks=rag_chunks,
             navigation=navigation,
+            symptom_alternatives=symptom_alternatives,
         )
 
         full_answer = ""
@@ -89,10 +94,31 @@ async def generate_stream(user_id: str, query: str) -> AsyncGenerator[str, None]
         session_service.update_context(
             user_id,
             muscle=muscle_doc.get("name") if muscle_doc else None,
-            symptom=symptom_doc.get("name") if symptom_doc else None,
+            symptom=(
+                symptom_doc.get("name")
+                if symptom_doc and not symptom_alternatives
+                else None
+            ),
         )
 
-        yield f"data: {json.dumps({'type': 'done', 'intent': intent, 'navigation': navigation or ''})}\n\n"
+        muscles_list = []
+        if muscle_doc:
+            muscles_list = [muscle_doc["name"]]
+        elif symptom_doc:
+            muscles_list = (
+                symptom_doc.get("primary_muscles", []) +
+                symptom_doc.get("secondary_muscles", [])
+            )
+
+        done_payload = {
+            "type": "done",
+            "intent": intent,
+            "should_navigate": bool(navigation),
+            "muscles": muscles_list,
+            "muscle_found": muscle_doc.get("name") if muscle_doc else None,
+            "symptom_found": symptom_doc.get("name") if symptom_doc else None,
+        }
+        yield f"data: {json.dumps(done_payload)}\n\n"
 
     except Exception as e:
         log.error(f"Stream error: {e}", exc_info=True)

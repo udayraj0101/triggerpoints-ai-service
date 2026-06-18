@@ -12,6 +12,7 @@ def build_prompt(
     symptom_doc: dict | None,
     rag_chunks: list[str],
     navigation: str | None,
+    symptom_alternatives: list[str] | None = None,
 ) -> str:
     parts = [
         "You are the AI assistant for the TriggerPoints3D app — a clinical trigger point therapy tool.",
@@ -62,6 +63,14 @@ def build_prompt(
             parts.append(f"Secondary muscles (may contribute): {', '.join(symptom_doc['secondary_muscles'])}")
         parts.append("")
 
+    # Ambiguity — multiple symptoms matched closely
+    if symptom_alternatives:
+        parts.append(
+            "The user's query was general and could match several symptoms in the database. "
+            "Other close matches: " + ", ".join(symptom_alternatives) + "."
+        )
+        parts.append("")
+
     # RAG knowledge chunks
     if rag_chunks:
         parts.append("Reference knowledge from the trigger point therapy book:")
@@ -83,11 +92,22 @@ def build_prompt(
             "then include the navigation steps above exactly as written."
         )
     elif intent == "FLOW_A":
-        parts.append(
-            "The user has a symptom and needs to find the causing muscle. "
-            "Explain which muscles are most likely responsible and why, "
-            "then include the navigation steps above to guide them in the app."
-        )
+        if symptom_alternatives:
+            parts.append(
+                f"The user's query ('{query}') is general and matches several symptoms in the database. "
+                "Do NOT provide full navigation steps or muscle details yet. "
+                "Instead, briefly list the close matches above and ask the user which one best describes "
+                "their symptom (e.g. by location — back of neck, front of neck, side of neck). "
+                "Keep the reply short — one sentence of context, then the clarifying question."
+            )
+        else:
+            parts.append(
+                "The user has a symptom and needs to find the causing muscle. "
+                "Explain which muscles are most likely responsible for THIS specific symptom and why, "
+                "then include the navigation steps above to guide them in the app. "
+                "Do NOT mention, explain, or generate navigation steps for any other symptom or condition, "
+                "even if related ones appear in the reference knowledge."
+            )
     elif intent == "HYBRID":
         parts.append(
             "The user wants both an explanation and navigation. "

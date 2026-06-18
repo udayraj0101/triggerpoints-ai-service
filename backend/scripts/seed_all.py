@@ -43,12 +43,23 @@ def main():
     log.info("ALL DONE")
     log.info("=" * 60)
     log.info("")
-    log.info("IMPORTANT: Create Atlas Vector Search index manually:")
-    log.info("  1. Go to MongoDB Atlas → your cluster → Search")
-    log.info("  2. Create Search Index → JSON editor")
-    log.info("  3. Collection: triggerpoints.knowledge_chunks")
-    log.info("  4. Index name: vector_index")
-    log.info("  5. Paste this definition:")
+    log.info("IMPORTANT: Create TWO Atlas Vector Search indexes manually:")
+    log.info("")
+    log.info("Index 1 — knowledge chunks (RAG):")
+    log.info("  Collection: triggerpoints.knowledge_chunks")
+    log.info("  Index name: vector_index")
+    log.info("""  {
+    "fields": [{
+      "type": "vector",
+      "path": "embedding",
+      "numDimensions": 3072,
+      "similarity": "cosine"
+    }]
+  }""")
+    log.info("")
+    log.info("Index 2 — symptoms (semantic symptom resolution):")
+    log.info("  Collection: triggerpoints.symptoms")
+    log.info("  Index name: symptom_vector_index")
     log.info("""  {
     "fields": [{
       "type": "vector",

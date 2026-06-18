@@ -1,10 +1,24 @@
 """
 Symptom lookup service.
+
+Strategy for resolving a free-text query → a symptom doc:
+  1. Exact / substring match on symptom name (free, deterministic).
+  2. Atlas Vector Search on the symptoms collection (semantic).
+     - If the top match is clearly ahead → return it as the resolved symptom.
+     - If multiple matches score close together → return the top match plus
+       alternative names so the chat layer can ask the user to disambiguate.
+  3. No confident match → return (None, []). Caller falls back to generic guidance.
 """
 from app.services.mongo_service import symptoms
+from app.services.vector_service import embed_query
 from app.utils.logger import get_logger
 
 log = get_logger("symptom_service")
+
+VECTOR_INDEX_NAME = "symptom_vector_index"
+VECTOR_MIN_SCORE = 0.72          # below this → no confident match at all
+AMBIGUITY_GAP = 0.03             # if top-1 minus top-2 score < this → ambiguous
+MAX_ALTERNATIVES = 3             # number of alternative names to surface
 
 
 def find_symptom(query: str) -> dict | None:
@@ -12,12 +26,10 @@ def find_symptom(query: str) -> dict | None:
     q = query.strip()
     col = symptoms()
 
-    # Exact match
     doc = col.find_one({"name": {"$regex": f"^{q}$", "$options": "i"}})
     if doc:
         return doc
 
-    # Partial match — query is substring of symptom name
     doc = col.find_one({"name": {"$regex": q, "$options": "i"}})
     if doc:
         return doc
@@ -25,56 +37,98 @@ def find_symptom(query: str) -> dict | None:
     return None
 
 
-def extract_symptom_from_query(query: str) -> dict | None:
+def find_symptom_candidates_by_vector(query: str, top_k: int = 5) -> list[dict]:
+    """Top-K semantic candidates from Atlas Vector Search, sorted by score desc."""
+    embedding = embed_query(query)
+    if not embedding:
+        return []
+
+    try:
+        pipeline = [
+            {
+                "$vectorSearch": {
+                    "index": VECTOR_INDEX_NAME,
+                    "path": "embedding",
+                    "queryVector": embedding,
+                    "numCandidates": top_k * 10,
+                    "limit": top_k,
+                }
+            },
+            {
+                "$project": {
+                    "name": 1,
+                    "region": 1,
+                    "primary_muscles": 1,
+                    "secondary_muscles": 1,
+                    "score": {"$meta": "vectorSearchScore"},
+                    "_id": 0,
+                }
+            },
+        ]
+        return list(symptoms().aggregate(pipeline))
+    except Exception as e:
+        log.error(f"Symptom vector search failed: {e}")
+        return []
+
+
+def resolve_symptom_from_query(query: str) -> tuple[dict | None, list[str]]:
     """
-    Scan query text for any known symptom name.
-    Also does reverse match — checks if key query words appear in symptom names.
-    Returns best match found.
+    Resolve a user query to a symptom doc plus optional alternatives.
+
+    Returns:
+        (doc, alternatives)
+        - doc: the best-matching symptom doc (or None if no confident match)
+        - alternatives: list of other symptom names worth offering when the
+          query is ambiguous (empty list if the match is unambiguous)
     """
-    col = symptoms()
     q_lower = query.lower()
 
-    all_symptoms = list(col.find({}, {"name": 1}))
-    # Sort by length descending for greedy matching
+    # Pass 1: exact / substring match — symptom name appears verbatim in query
+    all_symptoms = list(symptoms().find({}, {"name": 1}))
     all_symptoms.sort(key=lambda s: len(s.get("name", "")), reverse=True)
 
-    # Pass 1: symptom name is substring of query (exact)
     for s in all_symptoms:
         name = s.get("name", "")
-        if name.lower() in q_lower:
-            return find_symptom(name)
+        if name and name.lower() in q_lower:
+            log.debug(f"Symptom substring match: '{name}'")
+            return find_symptom(name), []
 
-    # Pass 2: meaningful query words appear in symptom name
-    stop_words = {"i", "have", "my", "a", "an", "the", "is", "are", "feel", "feeling",
-                  "some", "bad", "very", "really", "bit", "little", "lot", "of", "in",
-                  "at", "on", "with", "and", "or", "do", "does", "can", "get"}
-    query_words = [w for w in q_lower.split() if w not in stop_words and len(w) > 2]
+    # Pass 2: semantic vector match (top-K candidates)
+    candidates = find_symptom_candidates_by_vector(query, top_k=MAX_ALTERNATIVES + 1)
+    if not candidates:
+        return None, []
 
-    best_match = None
-    best_score = 0
-    for s in all_symptoms:
-        name = s.get("name", "").lower()
-        matched_words = [w for w in query_words if w in name]
-        # Score = matched words / total symptom words (precision)
-        symptom_words = [w for w in name.split() if w not in stop_words and len(w) > 2]
-        if not symptom_words:
-            continue
-        score = len(matched_words) / len(symptom_words)
-        if score > best_score and len(matched_words) >= 1:
-            best_score = score
-            best_match = s.get("name")
+    top = candidates[0]
+    top_score = top.get("score", 0)
 
-    if best_score >= 0.4 and best_match:
-        return find_symptom(best_match)
+    if top_score < VECTOR_MIN_SCORE:
+        log.debug(f"Top vector score {top_score:.3f} below threshold for '{query}'")
+        return None, []
 
-    # Pass 3: single meaningful word substring match for short queries
-    if len(query_words) <= 2:
-        for s in all_symptoms:
-            name = s.get("name", "").lower()
-            if any(w in name for w in query_words if len(w) >= 4):
-                return find_symptom(s.get("name"))
+    # Decide if the result is ambiguous: top-1 and top-2 within AMBIGUITY_GAP
+    second_score = candidates[1].get("score", 0) if len(candidates) > 1 else 0
+    is_ambiguous = (top_score - second_score) < AMBIGUITY_GAP
 
-    return None
+    if not is_ambiguous:
+        log.debug(f"Symptom vector match: '{top['name']}' (score={top_score:.3f}, clear winner)")
+        return top, []
+
+    # Ambiguous: surface alternatives that are also above threshold
+    alternatives = [
+        c["name"] for c in candidates[1:]
+        if c.get("score", 0) >= VECTOR_MIN_SCORE
+    ][:MAX_ALTERNATIVES]
+    log.debug(
+        f"Symptom vector ambiguous: top='{top['name']}' ({top_score:.3f}), "
+        f"alternatives={alternatives}"
+    )
+    return top, alternatives
+
+
+def extract_symptom_from_query(query: str) -> dict | None:
+    """Backwards-compatible accessor — returns just the resolved doc."""
+    doc, _ = resolve_symptom_from_query(query)
+    return doc
 
 
 def get_symptoms_for_region(region: str) -> list[dict]:
